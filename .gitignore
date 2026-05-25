@@ -1,0 +1,13 @@
+# Large local artifacts
+/Checkpoints*/
+/DATA/
+
+# Local workspace state
+/.omx/
+/.vscode/
+.DS_Store
+/test_*.sh
+
+# Python cache
+__pycache__/
+*.pyc
