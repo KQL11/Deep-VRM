@@ -15,7 +15,7 @@ This repository is a preview release. The full project release is in preparation
 - 🧪 Code: [preview version](https://github.com/KQL11/Deep-VRM)
 - 📦 Training data: coming soon
 - 🧠 Model checkpoints: [Deep-VRM-Qwen-25-VL-7B](https://huggingface.co/Kaiqing/Deep-VRM-Qwen-25-VL-7B/tree/main)
-  Since the model checkpoint was trained on AMD GPUs, we are not sure whether there may be performance differences during reproduction. Please contact us if you have any questions.
+  ❗ Since the model checkpoint was trained on AMD GPUs, we are not sure whether there may be performance differences during reproduction. Please contact us if you have any questions.
 
 ## 🔍 Overview
 
@@ -31,9 +31,11 @@ Models/DeepVRM/      DeepVRM model, processor, registration, and custom tuner co
 ms-swift/            Local SWIFT training framework used by the scripts
 run_Stage1.sh        Stage 1 training script
 run_Stage2.sh        Stage 2 training script
+eval.sh              Evaluation script
+DATA/Test/eval_data.json  Evaluation data template used by eval.sh
 ```
 
-Large training artifacts are intentionally not included in this release. The `DATA/` and `Checkpoints*/` directories are ignored by Git and will be released separately.
+Large training artifacts are intentionally not included in this release. The `DATA/` and `Checkpoints*/` directories are ignored by Git, except for the small evaluation template at `DATA/Test/eval_data.json`.
 
 ## ⚙️ Environment Setup
 
@@ -61,6 +63,16 @@ bash run_Stage2.sh
 ```
 
 Before running the scripts, update the dataset paths, checkpoint paths, GPU settings, and batch sizes according to your environment.
+
+## 🧪 Evaluation
+
+Prepare one or more evaluation JSON files following the format in `DATA/Test/eval_data.json`, then place them in `DATA/Test` or pass another directory to `eval.sh`.
+
+```bash
+MODEL_PATH=Kaiqing/Deep-VRM-Qwen-25-VL-7B ./eval.sh DATA/Test
+```
+
+Results are saved to `output/` by default.
 
 ## 🙏 Acknowledgements
 

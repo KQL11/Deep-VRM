@@ -1,0 +1,24 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Is this image real or fake? Please just answer 'real' or 'fake'. <image>"
+      }
+    ],
+    "images": [
+      "path/to/image_1.jpg"
+    ]
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Is this image real or fake? Please just answer 'real' or 'fake'. <image>"
+      }
+    ],
+    "images": [
+      "path/to/image_2.jpg"
+    ]
+  }
+]

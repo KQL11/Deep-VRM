@@ -1,6 +1,8 @@
 # Large local artifacts
 /Checkpoints*/
-/DATA/
+/DATA/*
+!/DATA/Test/
+!/DATA/Test/eval_data.json
 
 # Local workspace state
 /.omx/
