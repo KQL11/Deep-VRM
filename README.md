@@ -15,6 +15,7 @@ This repository is a preview release. The full project release is in preparation
 - 🧪 Code: [preview version](https://github.com/KQL11/Deep-VRM)
 - 📦 Training data: coming soon
 - 🧠 Model checkpoints: [Deep-VRM-Qwen-25-VL-7B](https://huggingface.co/Kaiqing/Deep-VRM-Qwen-25-VL-7B/tree/main)
+  Since the model checkpoint was trained on AMD GPUs, we are not sure whether there may be performance differences during reproduction. Please contact us if you have any questions.
 
 ## 🔍 Overview
 
