@@ -1,14 +1,20 @@
 # Deep Residual Injection for Full-Spectrum Forensic Signal Perception in Multimodal Large Language Models
 
-📄 This is the official code of the paper (ICML 2026) **"Deep Residual Injection for Full-Spectrum Forensic Signal Perception in Multimodal Large Language Models"**.
+<p align="center">
+  <a href="https://arxiv.org/abs/2606.15880"><img src="https://img.shields.io/badge/ArXiv-B31B1B?logo=arxiv&logoColor=white" alt="ArXiv"></a>
+  <a href="https://github.com/KQL11/Deep-VRM"><img src="https://img.shields.io/badge/Code-7F52FF?logo=github&logoColor=white" alt="Code"></a>
+  <a href="https://huggingface.co/Kaiqing/Deep-VRM-Qwen-25-VL-7B/tree/main"><img src="https://img.shields.io/badge/Model-369c2b?logo=huggingface" alt="Model"></a>
+</p>
+
+📄 This is the official code of the paper (ICML 2026) **["Deep Residual Injection for Full-Spectrum Forensic Signal Perception in Multimodal Large Language Models"](https://arxiv.org/abs/2606.15880)**.
 
 ## 📌 Release Status
 
 This repository is a preview release. The full project release is in preparation.
 
-- 🧪 Code: preview version
+- 🧪 Code: [preview version](https://github.com/KQL11/Deep-VRM)
 - 📦 Training data: coming soon
-- 🧠 Model checkpoints: coming soon
+- 🧠 Model checkpoints: [Deep-VRM-Qwen-25-VL-7B](https://huggingface.co/Kaiqing/Deep-VRM-Qwen-25-VL-7B/tree/main)
 
 ## 🔍 Overview
 
