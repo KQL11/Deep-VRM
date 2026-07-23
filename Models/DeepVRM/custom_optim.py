@@ -17,6 +17,15 @@ if TYPE_CHECKING:
     from swift.llm import TrainArguments
 
 
+@torch.no_grad()
+def initialize_low_level_visual(model: torch.nn.Module) -> None:
+    """Initialize the low-level vision tower from the pretrained main tower."""
+    visual = deep_getattr(model, 'model.visual')
+    visual_low_level = deep_getattr(model, 'model.visual_low_level')
+    visual_low_level.load_state_dict(visual.state_dict(), strict=True)
+    logger.info('Initialized model.visual_low_level from model.visual.')
+
+
 def is_vit_param(model_arch, parameter_name: str) -> bool:
     for module_prefix in model_arch.vision_tower + model_arch.aligner:
         if "visual_low_level" in module_prefix:    
@@ -87,6 +96,9 @@ class CustomTuner(Tuner):
 
     @staticmethod
     def from_pretrained(model: torch.nn.Module, model_id: str, **kwargs) -> torch.nn.Module:
+        # Recreate the same low-level base used at the start of Stage 2 before
+        # loading a saved LoRA/custom adapter on top of it.
+        initialize_low_level_visual(model)
         model = Swift.from_pretrained(model, model_id, **kwargs)
         # state_dict = safetensors.torch.load_file(os.path.join(model_id, 'vit_low_level.safetensors'))
         # model.load_state_dict(state_dict, strict=False)
@@ -114,6 +126,11 @@ class CustomTuner(Tuner):
 
     @staticmethod
     def prepare_model(args: 'TrainArguments', model: torch.nn.Module) -> torch.nn.Module:
+        # The base checkpoint has already been loaded at this point, while LoRA
+        # modules have not yet been injected. Copying here initializes the new
+        # low-level tower from the pretrained main vision tower.
+        initialize_low_level_visual(model)
+
         model_arch = model.model_meta.model_arch
         target_regex, module_dict = get_multimodal_target_regex(model, freeze_vit=False, freeze_llm=False, freeze_aligner=False)
         

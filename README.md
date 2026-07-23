@@ -16,6 +16,7 @@ This repository is a preview release. The full project release is in preparation
 - 📦 Training data: coming soon
 - 🧠 Model checkpoints: [Deep-VRM-Qwen-25-VL-7B](https://huggingface.co/Kaiqing/Deep-VRM-Qwen-25-VL-7B/tree/main)
   ❗ Since the model checkpoint was trained on AMD GPUs, we are not sure whether there may be performance differences during reproduction. Please contact us if you have any questions.
+- **⚠️ Warning! We fixed a bug where the Low-Level Visual Encoder was not initialized from the pretrained main visual encoder before Stage 2 training (see `Models/DeepVRM/custom_optim.py` for the fix). Please use the latest version of our code.**
 
 ## 🔍 Overview
 
