@@ -3,6 +3,11 @@
 /DATA/*
 !/DATA/Test/
 !/DATA/Test/eval_data.json
+!/DATA/Train/
+!/DATA/Train/Prompts/
+/DATA/Train/Prompts/*
+!/DATA/Train/Prompts/*.json
+!/DATA/Train/Prompts/*.jsonl
 
 # Local workspace state
 /.omx/

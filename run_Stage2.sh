@@ -1,5 +1,5 @@
 
-DATASETS="Your Dataset"
+DATASETS="DATA/Train/Prompts/dda_1.json DATA/Train/Prompts/dda_2.json DATA/Train/Prompts/GenImageTrain.jsonl DATA/Train/Prompts/multiround_semantic.jsonl DATA/Train/Prompts/Non-semantic.jsonl DATA/Train/Prompts/unrealistic.json"
 
 export MASTER_PORT=29502
 
