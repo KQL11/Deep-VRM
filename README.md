@@ -138,8 +138,19 @@ This project uses and builds on [modelscope/ms-swift](https://github.com/modelsc
 
 ## 📝 Citation
 
-Coming soon.
+```bibtex
+@inproceedings{
+lin2026deep,
+title={Deep Residual Injection for Full-Spectrum Forensic Signal Perception in Multimodal Large Language Models},
+author={Kaiqing Lin and Zhiyuan Yan and Ruoxin Chen and Ke-Yue Zhang and Yue Zhou and Caiyong Piao and Bin Li and Taiping Yao and Bo Wang and Youchang Xiao and Shouhong Ding},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=S2ilvpV9du}
+}
+```
 
 ## 📜 License
 
-Coming soon.
+The original code in this repository is licensed under the Apache License 2.0. See [LICENSE](LICENSE) for details.
+
+Third-party components retain their original licenses, including [ms-swift](ms-swift/LICENSE). Model weights and datasets are subject to the licenses specified in their respective releases.
