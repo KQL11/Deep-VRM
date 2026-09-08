@@ -84,10 +84,10 @@ Image paths in each JSON or JSONL annotation file should be relative to the repo
 
 ```json
 {
-  "images": ["DATA/Train/Prompts/DeepVRM_Image/dda_coco_sd2/real/000000120400.png"],
+  "images": ["path/to/image_1.jpg"],
   "messages": [
-    {"role": "user", "content": "Is this a real image? <image>"},
-    {"role": "assistant", "content": "yes"}
+    {"role": "user", "content": "Is this image real or fake? Please just answer 'real' or 'fake'. <image>"},
+    {"role": "assistant", "content": "real"}
   ]
 }
 ```
